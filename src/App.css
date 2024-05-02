@@ -55,25 +55,25 @@ body {
   padding-bottom:35px;
   font-family: 'Cherry', sans-serif;
   font-size: 44/3px;
-  font-weight:600;
+  font-weight:500;
 }
 
 .subcategory {
   display: flex;
-  font-size: 16/3px;
+  font-size: 35/3px;
   font-weight:600;
   justify-content: flex-start;
 }
 
 .subcategory_price {
-  font-size: 15px;
+  font-size: 35/3px;
   text-align: right;
 }
 
 .info {
   text-align: left;
-  font-size:20/3px;
-  padding-right:8px;
+  font-size:44/3px;
+  padding-right:3px;
 }
 
 .price {
