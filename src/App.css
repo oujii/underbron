@@ -1,6 +1,30 @@
+@font-face {
+  font-family: 'Authentic';
+  src: url('./fonts/AUTHENTICSans130-Regular.woff2') format('woff2'),
+       url('./fonts/AUTHENTICSans130-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cherry';
+  src: url('./fonts/CherrySwash-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Torre';
+  src: url('./fonts/TorreFarfan-Regular.woff2') format('woff2'),
+       url('./fonts/TorreFarfan-Regular.woff') format('woff');
+}
+
 .App {
   text-align: center;
+  padding-bottom:100px;
+  background-color:#000;
 }
+
+body {
+  max-width:100vw;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -13,13 +37,63 @@
   }
 }
 
+.wrapper {
+  grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    color: #d0caf8;
+    background-color: #000;
+    flex-flow: column;
+    font-family: "Authenticsans 130", sans-serif;
+    display: flex;
+    
+}
+
+.category_title {
+  padding-top:35px;
+  padding-bottom:35px;
+  font-family: 'Cherry', sans-serif;
+  font-size: 20px;
+}
+
+.subcategory {
+  display: flex;
+  font-size: 15px;
+  justify-content: flex-start;
+}
+
+.subcategory_price {
+  font-size: 15px;
+}
+
+.info {
+  text-align: left;
+}
+
+.price {
+  text-align: right;
+}
+
+.producer {
+  font-family: 'Torre', sans-serif;
+  display: inline;
+}
+
+.menykategori {
+  font-family: 'Authentic', sans-serif;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 4.5fr 1fr;
+  grid-auto-columns: 1fr;
+  min-width: 100vw;
+  display: grid;
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #000;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }

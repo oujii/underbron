@@ -1,6 +1,7 @@
 import logo from './logo.svg';
+import stencil from './stencil.png';
 import './App.css';
-import React, { useState, useEffect, useDeferredValue } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("https://script.google.com/macros/s/AKfycbyPlstT4U_fwZwY1AT5seSq6OI3-NpmebHFm6x8bFcW20URDWQtaE23Sqr4PJzgo3TisA/exec");
+        const res = await fetch("https://script.google.com/macros/s/AKfycbwjStYyXiP06cq3t5lkPyii_HPit_KOGrbnEUxHvyOGVwra94kfLxMW2hjKB1AUPkcBbQ/exec");
         const jsonData = await res.json();
         setData(jsonData);
       } catch (error) {
@@ -20,21 +21,85 @@ function App() {
     fetchData();
   }, []);
   
+  // Variables to track whether each category title has been rendered
+  let highlightRendered = false;
+  let petNatRendered = false;
+  let vittRendered = false;
+  let rottRendered = false;
+  let orangeRendered = false;
+  let geistRendered = false;
+  let ovrigtRendered = false;
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {data ? (
           <div>
-            <h1>Data Loaded</h1>
-            <div className="producers">
-              {data.data.map((item, index) => 
-                item.producer ? <div key={index} className="producer">{item.producer}</div> : null
-              )}
+            <div className="wrapper">
+              {data.data.map((item, index) => (
+                <div key={index}>
+                  {/* Render category title if not rendered yet */}
+                  {!highlightRendered && item.category === 'Highlight' && (
+                    <>
+                      <div className="category_title"></div>
+                      {highlightRendered = true} {/* Update local variable */}
+                    </>
+                  )}
+
+                  {!petNatRendered && item.category === 'Pét Nat' && (
+                    <>
+                      <div className="category_title">Pét Nat</div>
+                      {petNatRendered = true} {/* Update local variable */}
+                    </>
+                  )}
+
+                  {!vittRendered && item.category === 'Vitt' && (
+                    <>
+                      <div className="category_title">Vitt</div>
+                      {vittRendered = true} {/* Update local variable */}
+                    </>
+                  )}
+                    {!rottRendered && item.category === 'Rött' && (
+                    <>
+                      <div className="category_title">Rött</div>
+                      {rottRendered = true} {/* Update local variable */}
+                    </>
+                  )}
+                    {!orangeRendered && item.category === 'Orange' && (
+                    <>
+                      <div className="category_title">Orange</div>
+                      {orangeRendered = true} {/* Update local variable */}
+                    </>
+                  )}
+                    {!geistRendered && item.category === 'Geist of the Night' && (
+                    <>
+                      <div className="category_title">Geist of the Night</div>
+                      {geistRendered = true} {/* Update local variable */}
+                    </>
+                  )}
+                    {!ovrigtRendered && item.category === 'Övrigt' && (
+                    <>
+                      <div className="category_title">Övrigt</div>
+                      {ovrigtRendered = true} {/* Update local variable */}
+                    </>
+                  )}
+
+                  {/* Render item */}
+                  {(item.category === 'Highlight' || item.category === 'Pét Nat' || item.category === 'Vitt' || item.category === 'Rött'  || item.category === 'Orange' || item.category === 'Geist of the Night'  || item.category === 'Övrigt') && (
+                    <div className="menykategori">
+                      <div className='subcategory'>{item.subcategory} </div>
+                      <div className='subcategory_price'>{item.subcategory_price} </div>
+                      <div className='info'>{item.year} {item.name}, <span className='producer'>{item.producer} {item.region}</span></div>
+                      <div className='price'>{item.price}</div>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         ) : (
-          <p>Loading data...</p>
+          <p>Laddar meny...</p>
         )}
         <a
           className="App-link"
