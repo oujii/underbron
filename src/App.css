@@ -36,7 +36,8 @@ body {
 
 
 .App-logo {
-  height: 60vmin;
+  width:100%;
+  margin-bottom:-40px;
   pointer-events: none;
 }
 
