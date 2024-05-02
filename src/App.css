@@ -54,25 +54,24 @@ body {
   padding-top:35px;
   padding-bottom:35px;
   font-family: 'Cherry', sans-serif;
-  font-size: 44/2px;
+  font-size: calc(44px / 2);
   font-weight:500;
 }
 
 .subcategory {
   display: flex;
-  font-size: 35/2px;
-  font-weight:600;
+  font-size: calc(35px / 2);  font-weight:600;
   justify-content: flex-start;
 }
 
 .subcategory_price {
-  font-size: 35/2px;
+  font-size: calc(35px / 2);
   text-align: right;
 }
 
 .info {
   text-align: left;
-  font-size:44/2px;
+  font-size:calc(44px / 2);
   padding-right:3px;
 }
 
