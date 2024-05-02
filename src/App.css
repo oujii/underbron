@@ -1,3 +1,8 @@
+:root {
+  --divided-by: 3;
+}
+
+
 @font-face {
   font-family: 'Authentic';
   src: url('./fonts/AUTHENTICSans130-Regular.woff2') format('woff2'),
@@ -54,24 +59,24 @@ body {
   padding-top:35px;
   padding-bottom:35px;
   font-family: 'Cherry', sans-serif;
-  font-size: calc(44px / 2);
+  font-size: calc(44px / var(--division-factor));
   font-weight:500;
 }
 
 .subcategory {
   display: flex;
-  font-size: calc(35px / 2);  font-weight:600;
+  font-size: calc(35px / var(--division-factor));  font-weight:600;
   justify-content: flex-start;
 }
 
 .subcategory_price {
-  font-size: calc(35px / 2);
+  font-size: calc(35px / var(--division-factor));
   text-align: right;
 }
 
 .info {
   text-align: left;
-  font-size:calc(44px / 2);
+  font-size:calc(44px / var(--division-factor));
   padding-right:3px;
 }
 
