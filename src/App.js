@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './geist_logo.mp4';
 import stencil from './stencil.png';
 import './App.css';
 import React, { useState, useEffect } from 'react';
@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+         <video src={logo} className="App-logo" alt="logo" autoPlay loop /> 
         {data ? (
           <div>
             <div className="wrapper">
