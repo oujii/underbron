@@ -37,7 +37,7 @@ body {
 
 .App-logo {
   width:100%;
-  margin-bottom:-40px;
+  margin-bottom:-60px;
   pointer-events: none;
 }
 
@@ -62,12 +62,21 @@ body {
   font-weight:500;
 }
 
+.category_title1 {
+  padding-top:calc(130px / var(--division-factor));
+  padding-bottom:calc(57px / var(--division-factor));
+  font-family: 'Cherry', sans-serif;
+  font-size: calc(44px / var(--division-factor));
+  font-weight:500;
+}
+
 .subcategory {
   display: flex;
   font-size: calc(35px / var(--division-factor));  
   font-weight:600;
   justify-content: flex-start;
 }
+
 
 .subcategory_price {
   font-size: calc(35px / var(--division-factor));

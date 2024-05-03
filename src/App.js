@@ -142,40 +142,40 @@ function App() {
                   {/* Render category title if not rendered yet */}
           {!highlightRendered && item.category === 'Highlight' && (
             <>
-              <div className="category_title"></div>
+              <div className="category_title1"></div>
               {highlightRendered = true} {/* Update local variable */}
             </>
           )}
 
           {!fpetnatRendered && item.category === 'Pét Nat' && (
             <>
-              <div className="category_title">Pét Nat</div>
+              <div className="category_title1">Pét Nat</div>
               {fpetnatRendered = true} {/* Update local variable */}
             </>
           )}
 
           {!fvittRendered && item.category === 'Vitt' && (
             <>
-              <div className="category_title">Vitt</div>
+              <div className="category_title1">Vitt</div>
               {fvittRendered = true} {/* Update local variable */}
             </>
           )}
 
            {!frottRendered && item.category === 'Rött' && (
             <>
-              <div className="category_title">Rött</div>
+              <div className="category_title1">Rött</div>
               {frottRendered = true} {/* Update local variable */}
             </>
           )}
            {!forangeRendered && item.category === 'Orange' && (
             <>
-              <div className="category_title">Orange</div>
+              <div className="category_title1">Orange</div>
               {forangeRendered = true} {/* Update local variable */}
             </>
           )}
              {!fmagnumRendered && item.category === 'Magnum' && (
             <>
-              <div className="category_title">Magnum</div>
+              <div className="category_title1">Magnum</div>
               {fmagnumRendered = true} {/* Update local variable */}
             </>
           )}
@@ -195,7 +195,6 @@ function App() {
 
               
 
-              <video src={logo} className="App-logo" alt="logo" autoPlay loop /> 
                 
 
 
