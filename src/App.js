@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("https://script.google.com/macros/s/AKfycbwjStYyXiP06cq3t5lkPyii_HPit_KOGrbnEUxHvyOGVwra94kfLxMW2hjKB1AUPkcBbQ/exec");
+        const res = await fetch("https://script.google.com/macros/s/AKfycbzZVxfujSYR7sF0Ord3QRyhpZ4tvs7fcTVJoyWkLzUkL1SJe51vY1__1SakB50bTCGyyA/exec");
         const jsonData = await res.json();
         setData(jsonData);
       } catch (error) {
@@ -30,6 +30,11 @@ function App() {
   let geistRendered = false;
   let ovrigtRendered = false;
   let snacksRendered = false;
+  let fpetnatRendered = false;
+  let fvittRendered = false;
+  let frottRendered = false;
+  let forangeRendered = false;
+
 
   return (
     <div className="App">
@@ -97,12 +102,20 @@ function App() {
                     <div className="menykategori">
                       <div className='subcategory'>{item.subcategory} </div>
                       <div className='subcategory_price'>{item.subcategory_price} </div>
-                      <div className='info'>{item.year} {item.name}, <span className='producer'>{item.producer} <br/>{item.region}</span></div>
+                      <div className='info'>{item.year} {item.name} <span className='producer'>{item.producer} <br/>{item.region}</span></div>
                       <div className='price'>{item.price}</div>
                     </div>
                   )}
                 </div>
               ))}
+
+              <video src={logo} className="App-logo" alt="logo" autoPlay loop /> 
+
+
+
+                
+
+
             </div>
           </div>
         ) : (
