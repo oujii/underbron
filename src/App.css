@@ -1,5 +1,5 @@
 :root {
-  --division-factor: 2;
+  --division-factor: 2.6;
 }
 
 
@@ -55,7 +55,7 @@ body {
 }
 
 .category_title {
-  padding-top:calc(57px / var(--division-factor));
+  padding-top:calc(90px / var(--division-factor));
   padding-bottom:calc(57px / var(--division-factor));
   font-family: 'Cherry', sans-serif;
   font-size: calc(44px / var(--division-factor));
