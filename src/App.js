@@ -29,6 +29,7 @@ function App() {
   let orangeRendered = false;
   let geistRendered = false;
   let ovrigtRendered = false;
+  let snacksRendered = false;
 
   return (
     <div className="App">
@@ -84,13 +85,19 @@ function App() {
                       {ovrigtRendered = true} {/* Update local variable */}
                     </>
                   )}
+                   {!snacksRendered && item.category === 'Snacks' && (
+                    <>
+                      <div className="category_title">Snacks</div>
+                      {snacksRendered = true} {/* Update local variable */}
+                    </>
+                  )}
 
                   {/* Render item */}
-                  {(item.category === 'Highlight' || item.category === 'Pét Nat' || item.category === 'Vitt' || item.category === 'Rött'  || item.category === 'Orange' || item.category === 'Geist of the Night'  || item.category === 'Övrigt') && (
+                  {(item.category === 'Highlight' || item.category === 'Pét Nat' || item.category === 'Vitt' || item.category === 'Rött'  || item.category === 'Orange' || item.category === 'Geist of the Night'  || item.category === 'Övrigt' || item.category === 'Snacks') && (
                     <div className="menykategori">
                       <div className='subcategory'>{item.subcategory} </div>
                       <div className='subcategory_price'>{item.subcategory_price} </div>
-                      <div className='info'>{item.year} {item.name}, <span className='producer'>{item.producer} {item.region}</span></div>
+                      <div className='info'>{item.year} {item.name}, <span className='producer'>{item.producer} <br/>{item.region}</span></div>
                       <div className='price'>{item.price}</div>
                     </div>
                   )}
