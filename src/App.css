@@ -54,6 +54,8 @@ body {
     
 }
 
+
+
 .category_title {
   padding-top:calc(90px / var(--division-factor));
   padding-bottom:calc(57px / var(--division-factor));
@@ -88,6 +90,13 @@ body {
   font-size:calc(44px / var(--division-factor));
   padding-right:3px;
 }
+.info_snacks {
+  text-align: left;
+  font-size:calc(44px / var(--division-factor));
+  padding-right:3px;
+
+  margin-bottom:-10px !important;
+}
 
 .price {
   text-align: right;
@@ -110,6 +119,7 @@ body {
   min-width: 100%;
   display: grid;
 }
+
 
 
 

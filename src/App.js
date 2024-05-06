@@ -112,7 +112,8 @@ function App() {
                     <div className="menykategori">
                       <div className='subcategory'>{item.subcategory} </div>
                       <div className='subcategory_price'>{item.subcategory_price} </div>
-                      <div className='info'>{item.year} {item.name} <span className='producer'>{item.producer} <br/>{item.region}</span></div>
+                      {item.producer ? <div className='info'>{item.year} {item.name}<br/><span className='producer'>{item.producer} <br/>{item.region}</span></div>
+                      : <div className='info_snacks'> {item.name} <span className='producer'>{item.producer} {item.region}</span></div>}
                       <div className='price'>{item.price}</div>
                     </div>
                   )}
@@ -185,7 +186,7 @@ function App() {
                     <div className="menykategori">
                       <div className='subcategory'>{item.subcategory} </div>
                       <div className='subcategory_price'>{item.subcategory_price}</div>
-                      <div className='info'>{item.year} {item.name} <br/><span className='producer'>{item.producer} ({item.region})</span></div>
+                      <div className='info'>{item.year} {item.name} <br/><span className='producer'><span style={{ textTransform: 'uppercase' }}>{item.producer} </span><br/>({item.region})</span></div>
                       <div className='price'>{item.price}</div>
                     </div>
                   )}
