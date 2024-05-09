@@ -54,7 +54,7 @@ function App() {
           <div>
             <div className="wrapper">
               {data.data.map((item, index) => (
-                <div key={index}>
+                <div key={index} style={item.producer ? {} : {height:'2px'}}>
                   {/* Render category title if not rendered yet */}
                   {!highlightRendered && item.category === 'Highlight' && (
                     <>
@@ -110,10 +110,10 @@ function App() {
                   {/* Render item */}
                   {(item.category === 'Highlight' || item.category === 'Pét Nat' || item.category === 'Vitt' || item.category === 'Rött'  || item.category === 'Orange' || item.category === 'Geist of the Night'  || item.category === 'Övrigt' || item.category === 'Snacks') && (
                     <div className="menykategori">
-                      <div className='subcategory'>{item.subcategory} </div>
-                      <div className='subcategory_price'>{item.subcategory_price} </div>
+                      <div className='subcategory'>{item.subcategory}</div>
+                      <div className='subcategory_price'>{item.subcategory_price}</div>
                       {item.producer ? <div className='info'>{item.year} {item.name}<br/><span className='producer'>{item.producer} <br/>{item.region}</span></div>
-                      : <div className='info_snacks'> {item.name} <span className='producer'>{item.producer} {item.region}</span></div>}
+                      : <div className='info_snacks'>{item.name} <span className='producer'>{item.producer} {item.region}</span></div>}
                       <div className='price'>{item.price}</div>
                     </div>
                   )}
