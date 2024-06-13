@@ -33,6 +33,7 @@ function App() {
   let highlightRendered = false;
   let petNatRendered = false;
   let vittRendered = false;
+  let roseRendered = false;
   let rottRendered = false;
   let orangeRendered = false;
   let geistRendered = false;
@@ -41,6 +42,7 @@ function App() {
   let fpetnatRendered = false;
   let fvittRendered = false;
   let frottRendered = false;
+  let froseRendered = false;
   let forangeRendered = false;
   let fmagnumRendered = false;
   
@@ -76,6 +78,12 @@ function App() {
                       {vittRendered = true} {/* Update local variable */}
                     </>
                   )}
+                   {!roseRendered && item.category === 'Rosé' && (
+                    <>
+                      <div className="category_title">Rosé</div>
+                      {roseRendered = true} {/* Update local variable */}
+                    </>
+                  )}
                     {!rottRendered && item.category === 'Rött' && (
                     <>
                       <div className="category_title">Rött</div>
@@ -108,7 +116,7 @@ function App() {
                   )}
 
                   {/* Render item */}
-                  {(item.category === 'Highlight' || item.category === 'Pét Nat' || item.category === 'Vitt' || item.category === 'Rött'  || item.category === 'Orange' || item.category === 'Geist of the Night'  || item.category === 'Övrigt' || item.category === 'Snacks') && (
+                  {(item.category === 'Highlight' || item.category === 'Pét Nat' || item.category === 'Vitt' || item.category === 'Rosé' || item.category === 'Rött'  || item.category === 'Orange' || item.category === 'Geist of the Night'  || item.category === 'Övrigt' || item.category === 'Snacks') && (
                     <div className="menykategori">
                       <div className='subcategory'>{item.subcategory}</div>
                       <div className='subcategory_price'>{item.subcategory_price}</div>
@@ -161,6 +169,12 @@ function App() {
               {fvittRendered = true} {/* Update local variable */}
             </>
           )}
+           {!froseRendered && item.category === 'Rosé' && (
+            <>
+              <div className="category_title1">Rosé</div>
+              {froseRendered = true} {/* Update local variable */}
+            </>
+          )}
 
            {!frottRendered && item.category === 'Rött' && (
             <>
@@ -182,9 +196,9 @@ function App() {
           )}
 
                   {/* Render item */}
-                  {(item.category === 'Magnum' || item.category === 'Pét Nat' || item.category === 'Vitt' || item.category === 'Rött'  || item.category === 'Orange' || item.category === 'Geist of the Night'  || item.category === 'Övrigt' || item.category === 'Snacks') && (
+                  {(item.category === 'Magnum' || item.category === 'Pét Nat' || item.category === 'Vitt' || item.category === 'Rosé' || item.category === 'Rött'  || item.category === 'Orange' || item.category === 'Geist of the Night'  || item.category === 'Övrigt' || item.category === 'Snacks') && (
                     <div className="menykategori">
-                      <div className='subcategory'>{item.subcategory} </div>
+                      <div className='subcategory'>{item.subcategory}</div>
                       <div className='subcategory_price'>{item.subcategory_price}</div>
                       <div className='info'>{item.year} {item.name} <br/><span className='producer'><span style={{ textTransform: 'uppercase' }}>{item.producer} </span><br/>({item.region})</span></div>
                       <div className='price'>{item.price}</div>
@@ -192,6 +206,7 @@ function App() {
                   )}
                 </div>
               ))}
+
 
 
               
